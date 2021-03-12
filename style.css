@@ -1,0 +1,277 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  width: 100%;
+  box-shadow: 0px 1px 4px 0px;
+}
+/* .sticky + .top-contents {
+  padding-top: 102px;
+} */
+.wrapper {
+  width: 100%;
+}
+.header {
+  display: flex;
+  padding: 20px;
+  z-index: 10;
+  justify-content: space-between;
+}
+
+.mobileNav {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.mobileNav nav {
+  position: absolute;
+  left: 13px;
+  border-radius: 6px;
+  width: 350px;
+  background: white;
+  text-align: center;
+  margin-top: 85px;
+  box-shadow: 0px 0px 0px 0px;
+}
+.mobileNav ul {
+  padding: 20px;
+}
+.mobileNav li {
+  font-size: 20px;
+  list-style: none;
+  margin: 20px;
+  font-weight: 500;
+}
+.dNav {
+  display: none;
+}
+.close {
+  text-align: end;
+}
+.top-contents {
+  display: block;
+  background-image: url("./images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 400px;
+}
+.top-contents img {
+  height: 460px;
+  display: block;
+  margin: auto;
+  object-position: 0px -130px;
+}
+.top {
+  padding: 20px;
+  font-size: 18px;
+  width: 100%;
+  margin: auto;
+  margin-top: -20%;
+  text-align: center;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: grey;
+}
+button {
+  margin: 10px;
+  padding: 14px;
+  font-size: 18px;
+  width: 60%;
+  border-radius: 26px;
+  border: none;
+  font-family: inherit;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, limegreen, cyan 100%);
+}
+
+/* bank infos */
+.bank-infos {
+  background: rgb(235, 235, 235);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.top-info {
+  width: 90%;
+}
+
+.info {
+  margin: 20px;
+  line-height: 2.5rem;
+}
+
+.info img {
+  width: 100px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+/*  */
+
+/* articles */
+.articles {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 98%);
+  text-align: center;
+}
+.article {
+  line-height: 1.5rem;
+  margin: 10px;
+}
+.text {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  padding: 10px;
+  background: white;
+  text-align: left;
+}
+.article img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/*  */
+
+footer {
+  background: hsl(233, 26%, 24%);
+  color: white;
+  padding: 20px;
+}
+footer .contents {
+  color: white;
+}
+.contents img {
+  color: white;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.links ul,
+.links2 ul {
+  list-style: none;
+}
+.links li,
+.links2 li {
+  margin: 20px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 60em) {
+  .menu .hamburger {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+  }
+  .mobileNav {
+    display: none;
+  }
+  .dNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dNav li {
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+  }
+  .dNav li:hover {
+    border-bottom: 2px solid hsl(136, 65%, 51%);
+    font-weight: 700;
+  }
+  .dNav button {
+    flex-basis: inherit;
+  }
+  .top-contents {
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: url("./images/bg-intro-desktop.svg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-color: hsl(220, 16%, 96%);
+  }
+  .top {
+    margin: 0px;
+    text-align: start;
+    width: 40%;
+  }
+
+  .dinfo {
+    display: flex;
+    flex-direction: row;
+  }
+  .top-info {
+    text-align: left;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 30px;
+  }
+
+  .darticles {
+    padding: 20px;
+  }
+  .darticles h1 {
+    margin: 20px;
+  }
+  .articles {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer .contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .links,
+  .socials,
+  .image,
+  button {
+    flex-basis: 20%;
+  }
+  .last {
+    flex-basis: 25%;
+  }
+}
