@@ -42,6 +42,7 @@ body {
 .mobileNav nav {
   position: absolute;
   left: 13px;
+  right:13px;
   border-radius: 6px;
   width: 350px;
   background: white;
